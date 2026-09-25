@@ -37,6 +37,7 @@ body{
   background:#fff;transform-origin:top left;
 }
 #stage.paused *, #stage.paused{animation-play-state:paused !important}
+#player{text-align:left}
 
 /* ---------- geometría institucional ---------- */
 .geo{position:absolute;inset:0;overflow:hidden;pointer-events:none;transition:opacity .45s ease}
@@ -215,14 +216,14 @@ body{
 /* resaltador que recorre los campos del paso 1 */
 .hl-move{position:absolute;left:414px;top:122px;width:394px;height:36px;border:5px solid var(--rojo);border-radius:7px;
   box-shadow:0 0 0 9999px rgba(20,20,22,.22);opacity:0;pointer-events:none}
-.scene.active .hl-move{animation:hlmove 20s ease-in-out 2s both}
+.scene.active .hl-move{animation:hlmove 23.5s ease-in-out 3.5s both}
 @keyframes hlmove{
   0%{opacity:0;top:122px;left:414px;width:394px;height:36px}
-  3%,31%{opacity:1;top:122px;left:414px;width:394px;height:36px}
-  35%,51%{opacity:1;top:157px;left:414px;width:394px;height:36px}
-  55%,64%{opacity:1;top:193px;left:414px;width:394px;height:36px}
-  68%,77%{opacity:1;top:228px;left:414px;width:394px;height:36px}
-  81%,100%{opacity:1;top:262px;left:514px;width:192px;height:38px}
+  2.5%,23.9%{opacity:1;top:122px;left:414px;width:394px;height:36px}
+  26%,52.8%{opacity:1;top:157px;left:414px;width:394px;height:36px}
+  54.9%,61.3%{opacity:1;top:193px;left:414px;width:394px;height:36px}
+  63.4%,73.2%{opacity:1;top:228px;left:414px;width:394px;height:36px}
+  75.3%,100%{opacity:1;top:262px;left:514px;width:192px;height:38px}
 }
 
 /* pilas de capturas */
@@ -310,6 +311,8 @@ body{
   font-weight:700;font-size:17px;padding:16px 28px;border-radius:6px;white-space:nowrap;transition:background .15s ease;
 }
 .cta a.go:hover{background:var(--rojo-hondo)}
+.cta .alt{font-size:15px;color:var(--gris-med);line-height:1.5}
+.cta .alt a{color:var(--rojo);font-weight:700}
 .cta a.go:focus-visible{outline:3px solid var(--gris);outline-offset:3px}
 
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:22px}
@@ -445,13 +448,13 @@ body.intro-on{overflow:hidden}
     </section>
 
     <!-- 1 · Paso 1 -->
-    <section class="scene" data-dur="23">
+    <section class="scene" data-dur="27">
       <div class="pane">
         <div class="step a-wipe"><span class="tag">PASO 1</span><h2>Ingresa tus datos de registro</h2><span class="of">1 / 9</span></div>
         <div class="cols shot">
           <ul class="list">
             <li class="a-rise" style="--d:.5s"><b>Institución:</b> UAT Presencial o UAT EDC, según sea tu caso</li>
-            <li class="a-rise" style="--d:.75s"><b>Matrícula:</b> la que te dio el Departamento de Exámenes Estandarizados</li>
+            <li class="a-rise" style="--d:.75s"><b>Matrícula:</b> escríbela. Si deseas consultarla, entra al <b>Portal de Aspirantes UAT</b> con tu cuenta</li>
             <li class="a-rise" style="--d:1s"><b>Programa/Carrera:</b> elige tu carrera correctamente</li>
             <li class="a-rise" style="--d:1.15s"><b>Campus:</b> <em>Facultad de Ingeniería</em></li>
             <li class="a-rise" style="--d:1.3s">Acepta el <b>aviso de privacidad</b> y da clic en <em>Aceptar</em></li>
@@ -674,6 +677,7 @@ body.intro-on{overflow:hidden}
       <p class="url">registroenlinea.ceneval.edu.mx/RegistroLinea/indexCerrado.php</p>
     </div>
     <a class="go" href="https://registroenlinea.ceneval.edu.mx/RegistroLinea/indexCerrado.php#institucion" target="_blank" rel="noopener">Ir al registro en línea →</a>
+    <p class="alt">¿No recuerdas tu matrícula? <a href="https://registroaspirantes.uat.edu.mx/" target="_blank" rel="noopener">Consúltala en el Portal de Aspirantes UAT</a></p>
   </div>
 
   <div class="cards">
@@ -681,7 +685,7 @@ body.intro-on{overflow:hidden}
       <p class="k">ANTES DE EMPEZAR</p>
       <h3>Qué necesitas</h3>
       <ul>
-        <li>La matrícula que te proporcionó el Departamento de Exámenes Estandarizados</li>
+        <li>Tu matrícula (puedes consultarla en el Portal de Aspirantes UAT con tu cuenta)</li>
         <li>Tu CURP y tu acta de nacimiento a la mano</li>
         <li>Un correo electrónico al que tengas acceso</li>
       </ul>
@@ -707,7 +711,7 @@ body.intro-on{overflow:hidden}
   <h2>Resumen de los 9 pasos</h2>
   <p class="sub">Para consultarlos sin volver a ver el video.</p>
   <ol class="steps-ol">
-    <li><b>Datos de registro.</b> Elige UAT Presencial o UAT EDC, escribe tu matrícula, elige tu carrera, en Campus elige Facultad de Ingeniería, acepta el aviso de privacidad y da clic en Aceptar.</li>
+    <li><b>Datos de registro.</b> Elige UAT Presencial o UAT EDC, escribe tu matrícula (consúltala en el Portal de Aspirantes UAT), elige tu carrera, en Campus elige Facultad de Ingeniería, acepta el aviso de privacidad y da clic en Aceptar.</li>
     <li><b>Instrucciones.</b> Da clic en “Para continuar con el registro hacer clic aquí”.</li>
     <li><b>Datos personales.</b> Como aparecen en tu acta o CURP; desmarca “No soy mexicano(a)” si eres mexicano; correo en ambos campos; Siguiente.</li>
     <li><b>Verificación.</b> Revisa tus datos básicos y da clic en Aceptar.</li>
@@ -757,7 +761,7 @@ var OFFSET = []; DUR.reduce(function(a,d,i){ OFFSET[i]=a; return a+d; },0);
 
 var NARR = [
 "Bienvenido a la guía paso a paso para registrarte en línea al EXANI-II de CENEVAL y obtener tu pase de ingreso al examen.",
-"Entra al registro en línea de CENEVAL. En Institución, selecciona Universidad Autónoma de Tamaulipas Presencial, o EDC, según sea tu caso. Escribe la matrícula que te proporcionó el Departamento de Exámenes Estandarizados, y elige correctamente tu carrera. En Campus, selecciona Facultad de Ingeniería. Después, acepta el aviso de privacidad y da clic en Aceptar.",
+"Entra al registro en línea de CENEVAL. En Institución, selecciona Universidad Autónoma de Tamaulipas Presencial, o EDC, según sea tu caso. Escribe tu matrícula. Si deseas consultarla, entra al Portal de Aspirantes UAT con tu cuenta. Elige correctamente tu carrera y, en Campus, selecciona Facultad de Ingeniería. Después, acepta el aviso de privacidad y da clic en Aceptar.",
 "En la pantalla de instrucciones, da clic en: Para continuar con el registro, hacer clic aquí.",
 "Llena tus datos personales tal como aparecen en tu acta de nacimiento o CURP. Si eres mexicano, desmarca la casilla No soy mexicano y escribe tu CURP. Completa tu domicilio, tus teléfonos y tu correo en los dos espacios. Después, da clic en Siguiente.",
 "Aparecerá un recuadro de verificación. Revísalo con cuidado: si tus datos no son correctos, no tendrás derecho a presentar el examen. Si todo está bien, da clic en Aceptar.",
@@ -811,18 +815,47 @@ fit();
 
 function fmt(s){ s=Math.max(0,Math.round(s)); return Math.floor(s/60)+':'+String(s%60).padStart(2,'0'); }
 
-function speak(n){
-  if(!('speechSynthesis' in window)) return;
-  speechSynthesis.cancel();
-  if(!voz) return;
-  var u = new SpeechSynthesisUtterance(NARR[n]);
-  u.lang = 'es-MX'; u.rate = 1.02; u.pitch = 1;
+// narración: se lee frase por frase; al cambiar de escena hay una pausa antes de hablar,
+// y la escena no avanza hasta que la voz termina (más una pausa corta)
+var speechDone = true, speechEndAt = 0, speakTimer = null, pendingSpeak = -1, speechId = 0;
+var SPEECH_DELAY = 700, SPEECH_GAP = 0.9, SPEECH_MAX_WAIT = 15;
+function pickVoice(){
   var all = speechSynthesis.getVoices();
   var v = all.filter(function(x){ return /es(-|_)MX/i.test(x.lang); });
   if(!v.length) v = all.filter(function(x){ return /es(-|_)(US|419)/i.test(x.lang); });
   if(!v.length) v = all.filter(function(x){ return /^es/i.test(x.lang); });
-  if(v.length) u.voice = v[0];
-  speechSynthesis.speak(u);
+  return v.length ? v[0] : null;
+}
+function startSpeech(n){
+  pendingSpeak = -1;
+  var id = ++speechId, parts = CUES[n].map(function(c){ return c.s; }), voice = pickVoice();
+  speechDone = false;
+  parts.forEach(function(p, k){
+    var u = new SpeechSynthesisUtterance(p);
+    u.lang = 'es-MX'; u.rate = 1; u.pitch = 1;
+    if(voice) u.voice = voice;
+    if(k === parts.length - 1){
+      u.onend = u.onerror = function(){ if(id === speechId){ speechDone = true; speechEndAt = performance.now(); } };
+    }
+    speechSynthesis.speak(u);
+  });
+}
+function speak(n){
+  if(!('speechSynthesis' in window)) return;
+  clearTimeout(speakTimer); pendingSpeak = -1; speechId++;
+  speechSynthesis.cancel();
+  if(!voz){ speechDone = true; return; }
+  speechDone = false;
+  speakTimer = setTimeout(function(){
+    if(!playing){ pendingSpeak = n; return; }
+    startSpeech(n);
+  }, SPEECH_DELAY);
+}
+function waitingForVoice(){
+  if(!voz || !('speechSynthesis' in window)) return false;
+  if(t - DUR[i] > SPEECH_MAX_WAIT) return false;
+  if(!speechDone) return true;
+  return (performance.now() - speechEndAt)/1000 < SPEECH_GAP;
 }
 
 function go(n, keepTime){
@@ -840,14 +873,17 @@ function go(n, keepTime){
   cc.textContent = cueAt(i, t);
   if(changed){
     wipe.classList.remove('go'); void wipe.offsetWidth; wipe.classList.add('go');
-    speak(i);
   }
+  if(changed || !keepTime) speak(i);
 }
 
 function play(){
   playing = true; stage.classList.remove('paused');
   document.getElementById('bPlay').textContent = 'Pausa';
-  if(voz && 'speechSynthesis' in window && speechSynthesis.paused) speechSynthesis.resume();
+  if(voz && 'speechSynthesis' in window){
+    if(pendingSpeak >= 0) startSpeech(pendingSpeak);
+    else if(speechSynthesis.paused) speechSynthesis.resume();
+  }
   last = performance.now(); requestAnimationFrame(loop);
 }
 function pause(){
@@ -861,7 +897,7 @@ function loop(now){
   if(!playing) return;
   var dt = (now - last)/1000; last = now;
   t += dt;
-  if(t >= DUR[i]){
+  if(t >= DUR[i] && !waitingForVoice()){
     if(i < scenes.length-1){ go(i+1); }
     else { t = DUR[i]; pause(); }
   }
