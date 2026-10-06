@@ -32,9 +32,9 @@ const tl = JSON.parse(fs.readFileSync(tlFile, 'utf8'));
         if (n === 0) document.getElementById('wipe').classList.remove('go');
         window.__scene = n;
       }
-      document.getAnimations().forEach(function (a) { a.pause(); a.currentTime = t * 1000; });
       var cc = document.getElementById('cc');
       if (cc.textContent !== text) cc.textContent = text;
+      document.getAnimations().forEach(function (a) { a.pause(); a.currentTime = t * 1000; });
     };
   });
 

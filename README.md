@@ -14,7 +14,7 @@ pip install piper-tts
 python3 video/narracion.py video/fuente.html es_MX-claude-high.onnx /tmp/audio
 python3 video/linea_de_tiempo.py /tmp/audio
 node video/render.js video/fuente.html /tmp/audio/timeline.json /tmp/audio/voz.wav video/registro-exani-ii.mp4
-ffmpeg -y -ss 3 -i video/registro-exani-ii.mp4 -frames:v 1 -q:v 3 video/portada.jpg
 ```
 
-`render.js` necesita Playwright con Chromium y `ffmpeg`.
+`render.js` necesita Playwright con Chromium y `ffmpeg`. La portada (`video/portada.jpg`) es un cuadro de la escena inicial sin subtítulo:
+use el mismo `render.js` con un último argumento de segundos (p. ej. `4`) y una línea de tiempo con los textos de la escena 0 vacíos.
